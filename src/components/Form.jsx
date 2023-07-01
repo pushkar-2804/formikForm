@@ -109,7 +109,7 @@ const ContactForm = () => {
             </FormControl>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12}>
             <FormControl component="fieldset">
               <RadioGroup row>
                 <FormControlLabel
