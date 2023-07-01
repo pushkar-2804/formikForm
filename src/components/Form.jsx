@@ -9,13 +9,13 @@ import {
   RadioGroup,
   FormControlLabel,
   Radio,
-  Checkbox,
   Button,
   Grid,
 } from "@mui/material";
 import * as Yup from "yup";
 
 const countries = [
+  { value: "in", label: "India" },
   { value: "us", label: "United States" },
   { value: "ca", label: "Canada" },
   { value: "uk", label: "United Kingdom" },
@@ -36,15 +36,19 @@ const initialValues = {
 };
 
 const validationSchema = Yup.object({
-  name: Yup.string().required("Name is required"),
+  name: Yup.string()
+    .required("Name is required")
+    .min(2, "Name must be at least 2 characters")
+    .matches(/^[a-zA-Z ]*$/, "Name must contain only letters and spaces"),
   address: Yup.string().required("Address is required"),
   country: Yup.string().required("Country is required"),
   gender: Yup.string().required("Gender is required"),
 });
 
-const onSubmit = (values) => {
+const onSubmit = (values, { resetForm }) => {
   console.log(values);
   alert("Form submitted");
+  resetForm();
 };
 
 const ContactForm = () => {
@@ -87,7 +91,7 @@ const ContactForm = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12}>
             <FormControl fullWidth variant="outlined">
               <InputLabel id="country-label">Country</InputLabel>
               <Field as={Select} name="country" labelId="country-label">

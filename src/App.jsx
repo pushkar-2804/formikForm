@@ -4,7 +4,8 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <div className="contactWrap">
+      <h1>Contact Us</h1>
       <ContactForm />
     </div>
   );

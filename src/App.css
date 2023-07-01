@@ -41,6 +41,30 @@
   color: #888;
 } */
 
+body{
+  background-image: url(https://cdn.pixabay.com/photo/2016/03/22/15/29/blue-1273089_1280.jpg);
+  text-align: center;
+}
+
 .error-message {
   color: red !important;
+  text-align: left;
+}
+
+.contactWrap{
+  width: 50%;
+  margin: auto;
+  background-color: whitesmoke;
+  padding: 2vh 2vw;
+  /* border: 2px solid red; */
+}
+@media screen and (max-width: 768px) {
+  .contactWrap{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contactWrap{
+    width: 100%;
+  }
 }
