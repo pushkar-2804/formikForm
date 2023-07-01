@@ -44,6 +44,8 @@
 body{
   background-image: url(https://cdn.pixabay.com/photo/2016/03/22/15/29/blue-1273089_1280.jpg);
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .error-message {
@@ -53,7 +55,7 @@ body{
 
 .contactWrap{
   width: 50%;
-  margin: auto;
+  margin: 5vh auto;
   background-color: whitesmoke;
   padding: 2vh 2vw;
   /* border: 2px solid red; */
@@ -66,5 +68,7 @@ body{
 @media screen and (max-width: 500px) {
   .contactWrap{
     width: 100%;
+    margin: 5vh auto;
+
   }
 }

@@ -35,6 +35,7 @@ const initialValues = {
   hobbies: [],
 };
 
+// Validation
 const validationSchema = Yup.object({
   name: Yup.string()
     .required("Name is required")
@@ -45,6 +46,7 @@ const validationSchema = Yup.object({
   gender: Yup.string().required("Gender is required"),
 });
 
+// Submission
 const onSubmit = (values, { resetForm }) => {
   console.log(values);
   alert("Form submitted");
